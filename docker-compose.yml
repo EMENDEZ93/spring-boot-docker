@@ -1,7 +1,7 @@
 version: '3.6'
   
 services:
-  susalud-ae:
+  spring-boot-docker:
     build: .
     ports:
       - 8080:8080
@@ -9,14 +9,4 @@ services:
       - example=my value  
     volumes:
       - javatmp:/tmp
-    networks:
-      - docker_network
-          
-networks:
-  susalud_:
-    external:
-      name: docker_network    
-        
-volumes:
-  # default dir /var/lib/docker/volumes
-  javatmp:
+    network_mode: host         
