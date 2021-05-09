@@ -16,6 +16,7 @@ public class ListarUsuarioControlador {
 	private ListarUsuarioManejador listarUsuarioManejador;
 
 	@GetMapping("/list")
+	public List<Usuario> listar() {
 		return listarUsuarioManejador.ejecutar();
 	}
 	
